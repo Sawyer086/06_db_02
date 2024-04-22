@@ -181,6 +181,18 @@ select count (*) from clients;
 ![3](https://github.com/Sawyer086/06_db_02/blob/main/2/3.jpg)
 
 ## Задача 4:
+```
+update  clients set booking = 3 where id = 1;
+update  clients set booking = 4 where id = 2;
+update  clients set booking = 5 where id = 3;
+
+Запрос получения 1 -  учитывает наличие в таблице заказов данных:
+select * from clients as c where  exists (select id from orders as o where c.booking = o.id) ;
+Запрос получения 2 - проверяет на непустые значения у клиентов по заказам:
+select * from clients where booking is not null
+
+```
+![4](https://github.com/Sawyer086/06_db_02/blob/main/2/4.jpg)
 
 ## Задача 5:
 
