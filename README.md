@@ -98,7 +98,28 @@
 Ответ: 
 
 ## Задача 1:
+```
+version: '3.8'
 
+services:
+  postgres:
+    image: postgres:12
+    container_name: postgres12
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - pg_backups:/backups
+
+volumes:
+  pg_data:
+  pg_backups:
+```
 ## Задача 2:
 
 ## Задача 3:
