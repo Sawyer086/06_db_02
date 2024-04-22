@@ -198,6 +198,15 @@ select * from clients where booking is not null;
 ```
 EXPLAIN select * from clients as c where  exists (select id from orders as o where c.booking = o.id) ;
 ```
+Вариант 1
+
+Показывает стоимость(нагрузку на исполнение) запроса (не оптимальный в сравнении с 2)
+Показывает шаги связи, и сбор сканирование таблиц после связи
+
+Вариант 2
+
+Так же показывает стоимость(нагрузку на исполнение) запроса , и фильтрацию по полю Booking для выборки.
+
 ![5](https://github.com/Sawyer086/06_db_02/blob/main/2/5.jpg)
 
 ## Задача 6:
