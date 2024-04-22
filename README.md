@@ -171,6 +171,15 @@ WHERE table_catalog = 'test_db';
 
 ## Задача 3:
 
+```
+insert into orders VALUES (1, 'Шоколад', 10), (2, 'Принтер', 3000), (3, 'Книга', 500), (4, 'Монитор', 7000), (5, 'Гитара', 4000);
+insert into clients VALUES (1, 'Иванов Иван Иванович', 'USA'), (2, 'Петров Петр Петрович', 'Canada'), (3, 'Иоганн Себастьян Бах', 'Japan'), (4, 'Ронни Джеймс Дио', 'Russia'), (5, 'Ritchie Blackmore', 'Russia');
+select count (*) from orders;
+select count (*) from clients;
+
+```
+![3](https://github.com/Sawyer086/06_db_02/blob/main/2/3.jpg)
+
 ## Задача 4:
 
 ## Задача 5:
