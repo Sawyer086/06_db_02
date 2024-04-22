@@ -189,12 +189,16 @@ update  clients set booking = 5 where id = 3;
 Запрос получения 1 -  учитывает наличие в таблице заказов данных:
 select * from clients as c where  exists (select id from orders as o where c.booking = o.id) ;
 Запрос получения 2 - проверяет на непустые значения у клиентов по заказам:
-select * from clients where booking is not null
+select * from clients where booking is not null;
 
 ```
 ![4](https://github.com/Sawyer086/06_db_02/blob/main/2/4.jpg)
 
 ## Задача 5:
+```
+EXPLAIN select * from clients as c where  exists (select id from orders as o where c.booking = o.id) ;
+```
+![5](https://github.com/Sawyer086/06_db_02/blob/main/2/5.jpg)
 
 ## Задача 6:
 
