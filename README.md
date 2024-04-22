@@ -210,4 +210,27 @@ EXPLAIN select * from clients as c where  exists (select id from orders as o whe
 ![5](https://github.com/Sawyer086/06_db_02/blob/main/2/5.jpg)
 
 ## Задача 6:
-
+Бэкап:
+```
+docker exec -it postgres12 bash
+pg_dump -U admin test_db > /backups/test_db_backup.sql
+```
+Остановка контейнера: 
+```
+docker stop postgres12
+```
+Новый пустой контейнер с PostgreSQL:
+```
+docker run -d \
+  --name test_db \
+  -v /var/lib/docker/volumes/postgres_pg_backups/_data:/backups \
+  -e POSTGRES_DB=test_db \
+  -e POSTGRES_USER=admin \
+  -e POSTGRES_PASSWORD=1234qwer \
+  postgres:12
+```
+Восстановление БД:
+```
+docker exec -it test_db bash
+psql -U admin test_db < backups/test_db_backup.sql
+```
