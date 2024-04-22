@@ -121,6 +121,9 @@ volumes:
   pg_backups:
 ```
 ## Задача 2:
+
+Запросы:
+
 ```
 CREATE DATABASE test_db;
 CREATE ROLE "test-admin-user" SUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT LOGIN;
@@ -152,6 +155,14 @@ GRANT INSERT ON TABLE public.orders TO "test-simple-user";
 GRANT UPDATE ON TABLE public.orders TO "test-simple-user";
 GRANT DELETE ON TABLE public.orders TO "test-simple-user";
 ```
+Итоговый список БД после выполнения пунктов выше:
+![1]()
+Описание таблиц (describe):
+![1]()
+SQL-запрос для выдачи списка пользователей с правами над таблицами test_db:
+![1]()
+Список пользователей с правами над таблицами test_db:
+![1]()
 ## Задача 3:
 
 ## Задача 4:
