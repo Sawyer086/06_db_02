@@ -15,18 +15,18 @@
 - создайте пользователя test-simple-user;
 - предоставьте пользователю test-simple-user права на SELECT/INSERT/UPDATE/DELETE этих таблиц БД test_db.
   
-  Таблица orders:
+Таблица orders:
 - id (serial primary key);
 - наименование (string);
 - цена (integer).
   
-  Таблица clients:
+Таблица clients:
 - id (serial primary key);
 - фамилия (string);
 - страна проживания (string, index);
 - заказ (foreign key orders).
   
-  Приведите:
+Приведите:
 - итоговый список БД после выполнения пунктов выше;
 - описание таблиц (describe);
 - SQL-запрос для выдачи списка пользователей с правами над таблицами test_db;
