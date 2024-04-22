@@ -226,7 +226,7 @@ docker run -d \
   -v /var/lib/docker/volumes/postgres_pg_backups/_data:/backups \
   -e POSTGRES_DB=test_db \
   -e POSTGRES_USER=admin \
-  -e POSTGRES_PASSWORD=1234qwer \
+  -e POSTGRES_PASSWORD=postgres \
   postgres:12
 ```
 Восстановление БД:
