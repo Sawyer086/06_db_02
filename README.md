@@ -122,7 +122,7 @@ volumes:
 ```
 ## Задача 2:
 
-Запросы:
+SQL-запросы:
 
 ```
 CREATE DATABASE test_db;
@@ -155,14 +155,20 @@ GRANT INSERT ON TABLE public.orders TO "test-simple-user";
 GRANT UPDATE ON TABLE public.orders TO "test-simple-user";
 GRANT DELETE ON TABLE public.orders TO "test-simple-user";
 ```
-Итоговый список БД после выполнения пунктов выше:
-![1]()
-Описание таблиц (describe):
-![1]()
+Итоговый список БД после выполнения запросов и описание таблиц:
+
+![1](https://github.com/Sawyer086/06_db_02/blob/main/2/1.jpg)
+
 SQL-запрос для выдачи списка пользователей с правами над таблицами test_db:
-![1]()
+```
+SELECT grantee, table_name, privilege_type
+FROM information_schema.table_privileges
+WHERE table_catalog = 'test_db';
+```
 Список пользователей с правами над таблицами test_db:
-![1]()
+
+![2](https://github.com/Sawyer086/06_db_02/blob/main/2/2.jpg)
+
 ## Задача 3:
 
 ## Задача 4:
